@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Для тебя</title>
+<style>
+  /* Общий стиль и мягкий градиент */
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(-45deg, #ffe6e6, #fff0f5, #ffe0b3, #fff9e6);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+
+  /* Открытка */
+  #card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(255, 221, 225, 0.95);
+    transition: all 1s ease;
+  }
+  #card h1 {
+    font-size: 3em;
+    color: #ff4d6d;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  #card button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #ff4d6d;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  #card button:hover {
+    transform: scale(1.1);
+  }
+
+  /* Контейнер текста */
+  #text-container {
+    display: none;
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.7;
+    color: #5a3e36;
+    font-size: 1.2em;
+    position: relative;
+  }
+  p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+    margin-bottom: 25px;
+  }
+  p.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Строчка с сердечками */
+  .love-line {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    color: #ff3366;
+    font-size: 1.5em;
+    margin-top: 20px;
+    overflow: visible;
+  }
+  .heart {
+    position: absolute;
+    font-size: 14px;
+    opacity: 0.6;
+    animation: float 5s ease-in-out infinite;
+  }
+  @keyframes float {
+    0% { transform: translateY(0) scale(0.8) rotate(0deg); opacity: 0.6; }
+    50% { transform: translateY(-80px) scale(1.2) rotate(15deg); opacity: 0.4; }
+    100% { transform: translateY(-160px) scale(0.8) rotate(-15deg); opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Открытка -->
+<div id="card">
+  <h1>Для тебя</h1>
+  <button onclick="openCard()">Открыть</button>
+</div>
+
+<!-- Контейнер текста -->
+<div id="text-container">
+  <p>15.09.2024 — эта дата навсегда останется самым особенным и лучшим днем в моей жизни. именно тогда ты оказался в той группе, где была я. кто бы мог подумать, что твои первые сообщения и наше случайное знакомство станут для меня чем-то настолько важным?</p>
+
+  <p>с тех пор изменилось всё. появились разговоры до рассвета, наши общие шутки, теплые воспоминания и моменты, которые хочется проживать снова и снова. ты стал частью меня, моих мыслей, моего настроения и каждого моего дня. теперь эта дата для меня — не просто цифры в календаре, а начало чего-то настоящего, дорогого и очень светлого. иногда одно случайное сообщение способно изменить целую жизнь, и я бесконечно благодарна судьбе за то, что ты в моей появился.</p>
+
+  <p>за это время я поняла главное: «твой» человек — это не тот, с кем всегда всё легко и гладко, а тот, без которого уже невозможно представить свой день и, тем более, свою жизнь.</p>
+
+  <p>знаешь, я часто ловлю себя на том, что перечитываю наши старые переписки. в них столько искренности и того самого первого интереса, который теперь перерос во что-то гораздо большее. мне так тепло вспоминать то время, когда мы ещё стеснялись друг друга и только начинали открываться — это был такой удивительный период.</p>
+
+  <p>но самое ценное — это то спокойствие, которое ты мне даришь. даже после самого тяжелого дня мне становится хорошо, стоит нам только поговорить. пусть даже недолго, но для меня это значит очень многое. мне так дорого твое внимание, твоя забота, поддержка и ласковые слова. рядом с тобой я чувствую себя по-настоящему нужной и счастливой.</p>
+  <p>с тобой я могу быть собой: не притворяться, не бояться сказать глупость, смеяться без причины и делиться всем, что у меня на душе. это редкое чувство, и я его очень ценю. я правда дорожу тем, что у нас есть, и очень надеюсь, что впереди нас ждет еще бесконечно много теплых слов и счастливых моментов, которые мы будем вспоминать с такой же улыбкой, как сейчас вспоминаем наше начало. и я очень верю, что в будущем нас ждут встречи.</p>
+
+  <p>каждый раз, когда ты пишешь, я просто сижу и улыбаюсь. с тобой даже обычные моменты становятся особенными.</p>
+
+  <p class="love-line">я тебя очень очень очень очень сильно люблю</p>
+
+  <p>спасибо тебе за то, что ты есть. за твою доброту, за терпение и за твоё отношение ко мне. за то, что поддерживал меня, даже когда самому было непросто. за то, что слушал, смешил и просто был рядом. ты стал для меня человеком, который ассоциируется с домом, теплом и чем-то очень родным.</p>
+
+  <p>и я хочу попросить прощения, если иногда могу тебя раздражать, нести какой-то бред или делать что-то необдуманно. порой я действую на эмоциях и не всегда сразу понимаю, как это выглядит со стороны. но поверь, это никогда не со зла — просто ты слишком важен для меня, и я очень переживаю за всё, что связано с тобой. мне правда жаль, если я когда-то доставляла тебе дискомфорт. я стараюсь становиться лучше, чтобы беречь то, что между нами есть.</p>
+
+  <p>я хочу, чтобы ты справился со всеми трудностями, даже с теми, о которых ты предпочитаешь молчать. просто помни: я всегда на твоей стороне.</p>
+
+  <p>спасибо большое, что ты есть. я тебя очень очень очень очень сильно люблю, ценю, и дорожу тобой, просто не описать словами ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️</p>
+</div>
+
+<script>
+function openCard() {
+  document.getElementById('card').style.transform = 'scale(0)';
+  setTimeout(() => {
+    document.getElementById('card').style.display = 'none';
+    document.getElementById('text-container').style.display = 'block';
+    showParagraphs();
+    animateHearts();
+  }, 1000);
+}
+
+function showParagraphs() {
+  const paragraphs = document.querySelectorAll('#text-container p');
+  paragraphs.forEach((p, i) => {
+    setTimeout(() => {
+      p.classList.add('visible');
+    }, i * 700);
+  });
+}
+
+function animateHearts() {
+  const loveLine = document.querySelector('.love-line');
+  for (let i = 0; i < 5; i++) {
+    const heart = document.createElement('span');
+    heart.classList.add('heart');
+    heart.innerHTML = '❤️';
+    heart.style.left = Math.random() * 100 + '%';
+    heart.style.animationDuration = 4 + Math.random() * 2 + 's';
+    heart.style.fontSize = (12 + Math.random() * 10) + 'px';
+    loveLine.appendChild(heart);
+    setTimeout(() => { heart.remove(); }, 5000);
+  }
+  setInterval(animateHearts, 3000);
+}
+</script>
+</body>
+</html>
